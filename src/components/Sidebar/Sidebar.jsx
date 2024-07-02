@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {Box, Button, List, ListItem, ListItemIcon, Typography} from "@mui/material";
 import DatasetIcon from "../Icons/DatasetIcon";
 import WorkflowIcon from "../Icons/WorkflowIcon";
@@ -6,9 +7,9 @@ import "./Sidebar.css";
 
 const listItems = [{icon: <DatasetIcon />}, {icon: <WorkflowIcon />}, {icon: <CreditIcon />}];
 
-const Sidebar = () => {
+const Sidebar = ({isSidebarOpen}) => {
     return (
-        <Box className="sidebarContainer">
+        <Box className={`sidebarContainer ${isSidebarOpen ? "" : "hidden"}`}>
             <Typography variant="h5" className="customTypography">
                 Grepsr
             </Typography>

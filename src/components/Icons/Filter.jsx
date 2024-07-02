@@ -1,0 +1,11 @@
+const Filter = () => {
+    return (
+        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1H13" stroke="#1B2D4F" strokeLinecap="round" />
+            <path d="M3 5H11" stroke="#1B2D4F" strokeLinecap="round" />
+            <path d="M5 9H9" stroke="#1B2D4F" strokeLinecap="round" />
+        </svg>
+    );
+};
+
+export default Filter;

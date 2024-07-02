@@ -2,3 +2,16 @@
     margin: 0;
     padding: 0;
 }
+.content-wrap {
+    display: flex;
+    height: 100vh;
+    flex: 1;
+    transition: transform 0.5s ease-in-out;
+}
+.content-wrapper {
+    display: flex;
+    transition: margin-left 0.5s ease-in-out;
+}
+.sidebar-hidden .content-wrapper {
+    transform: translateX(-250px);
+}

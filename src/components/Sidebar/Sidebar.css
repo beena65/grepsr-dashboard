@@ -28,6 +28,8 @@
     height: 100vh;
     overflow: hidden;
     width: 212px !important;
+    transition: transform 0.5s ease-in-out !important;
+    transform: translateX(0);
 }
 
 .content {
@@ -35,6 +37,9 @@
     flex-grow: 1;
     display: flex;
     gap: 4px;
+}
+.hidden {
+    transform: translateX(-100%) !important;
 }
 
 .buttonContainer {

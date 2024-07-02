@@ -1,19 +1,21 @@
+/* eslint-disable react/prop-types */
 import {AppBar, Avatar, Button, IconButton, Toolbar, Typography, Box} from "@mui/material";
 import Arrowback from "../Icons/Arrowback";
 import Erroroutline from "../Icons/Erroroutline";
 import Materialsymbol from "../Icons/Materialsymbol";
 import Infinite from "../Icons/Infinite";
 import NotificationIcon from "../Icons/NotificationIcon";
+import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../../assets/profile.png";
 import "./Header.css";
 
-const Header = () => {
+const Header = ({isSidebarOpen, toggleSidebar}) => {
     return (
         <AppBar position="static" className="App-bar">
             <Toolbar className="tool-bar">
                 <Box sx={{flexGrow: 1}} className="box-wrap">
-                    <IconButton edge="start">
-                        <Arrowback />
+                    <IconButton edge="start" onClick={toggleSidebar}>
+                        {isSidebarOpen ? <Arrowback /> : <MenuIcon />}
                     </IconButton>
                     <Typography variant="h4" className="customtypography">
                         Amazon product price
