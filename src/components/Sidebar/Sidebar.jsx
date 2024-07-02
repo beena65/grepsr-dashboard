@@ -1,13 +1,17 @@
 /* eslint-disable react/prop-types */
-import {Box, Button, List, ListItem, ListItemIcon, Typography} from "@mui/material";
-import DatasetIcon from "../Icons/DatasetIcon";
-import WorkflowIcon from "../Icons/WorkflowIcon";
-import CreditIcon from "../Icons/CreditIcon";
+import {Box, Button, List, ListItemIcon, Typography} from "@mui/material";
 import "./Sidebar.css";
+import work from "../../assets/work.png";
+import data from "../../assets/data.png";
+import credit from "../../assets/credit.png";
 
-const listItems = [{icon: <DatasetIcon />}, {icon: <WorkflowIcon />}, {icon: <CreditIcon />}];
+const listItems = [
+    {image: data, label: "Dataset"},
+    {image: work, label: "Workflow"},
+    {image: credit, label: "Credit"},
+];
 
-const Sidebar = ({isSidebarOpen}) => {
+const Sidebar = ({isSidebarOpen, onItemClick, activeIndex}) => {
     return (
         <Box className={`sidebarContainer ${isSidebarOpen ? "" : "hidden"}`}>
             <Typography variant="h5" className="customTypography">
@@ -16,9 +20,21 @@ const Sidebar = ({isSidebarOpen}) => {
             <Box className="content">
                 <List>
                     {listItems.map((item, index) => (
-                        <ListItem key={index} className="listItem">
-                            <ListItemIcon>{item.icon}</ListItemIcon>
-                        </ListItem>
+                        <div
+                            key={index}
+                            className={`listItem ${activeIndex === index ? "active" : ""}`}
+                            onClick={() => onItemClick(index)}
+                        >
+                            <ListItemIcon style={{minWidth: "auto"}}>
+                                <img src={item.image} alt={item.label} style={{width: 24, height: 24}} />
+                            </ListItemIcon>
+                            <Typography
+                                variant="body1"
+                                className={`listItemText ${activeIndex === index ? "active" : ""}`}
+                            >
+                                {item.label}
+                            </Typography>
+                        </div>
                     ))}
                 </List>
             </Box>

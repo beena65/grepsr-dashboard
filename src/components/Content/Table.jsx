@@ -10,6 +10,7 @@ import Tabledata from "../../services/Api/Tabledata";
 import a from "../../assets/a.png";
 import fill from "../../assets/filter.png";
 import {Typography} from "@mui/material";
+import "./Content.css";
 
 const StyledTableCell = styled(TableCell)(() => ({
     [`&.${tableCellClasses.head}`]: {
@@ -67,7 +68,7 @@ export default function CustomizedTables() {
                             <div style={rowWrapperStyle}>
                                 <div style={{display: "flex"}}>
                                     <img src={a} alt="Product Image" />
-                                    <Typography variant="body1" style={{whiteSpace: "nowrap"}}>
+                                    <Typography variant="body1" className="productName" style={{whiteSpace: "nowrap"}}>
                                         Product Name
                                     </Typography>
                                 </div>
@@ -78,7 +79,7 @@ export default function CustomizedTables() {
                             <div style={rowWrapperStyle}>
                                 <div style={{display: "flex"}}>
                                     <img src={a} alt="Product Image" />
-                                    <Typography variant="body1" style={{whiteSpace: "nowrap"}}>
+                                    <Typography variant="body1" className="productName" style={{whiteSpace: "nowrap"}}>
                                         Price
                                     </Typography>
                                 </div>
@@ -89,7 +90,7 @@ export default function CustomizedTables() {
                             <div style={rowWrapperStyle}>
                                 <div style={{display: "flex"}}>
                                     <img src={a} alt="Product Image" />
-                                    <Typography variant="body1" style={{whiteSpace: "nowrap"}}>
+                                    <Typography variant="body1" className="productName" style={{whiteSpace: "nowrap"}}>
                                         Rating
                                     </Typography>
                                 </div>
@@ -100,7 +101,7 @@ export default function CustomizedTables() {
                             <div style={rowWrapperStyle}>
                                 <div style={{display: "flex"}}>
                                     <img src={a} alt="Product Image" />
-                                    <Typography variant="body1" style={{whiteSpace: "nowrap"}}>
+                                    <Typography variant="body1" className="productName" style={{whiteSpace: "nowrap"}}>
                                         Brand
                                     </Typography>
                                 </div>
@@ -111,7 +112,7 @@ export default function CustomizedTables() {
                             <div style={rowWrapperStyle}>
                                 <div style={{display: "flex"}}>
                                     <img src={a} alt="Product Image" />
-                                    <Typography variant="body1" style={{whiteSpace: "nowrap"}}>
+                                    <Typography variant="body1" className="productName" style={{whiteSpace: "nowrap"}}>
                                         Availability
                                     </Typography>
                                 </div>
