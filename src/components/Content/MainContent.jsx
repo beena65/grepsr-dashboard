@@ -1,18 +1,37 @@
-import {Box, Button} from "@mui/material";
+import {Box, Button, Typography} from "@mui/material";
 import Filter from "../Icons/Filter";
+import ToggleIcon from "../Icons/ToggleIcon";
+import EyeIcon from "../Icons/EyeIcon";
+import SaveIcon from "../Icons/SaveIcon";
+import "./Content.css";
+import CustomizedTables from "./Table";
 
 const MainContent = () => {
     return (
-        <div style={{marginTop: "26px", marginLeft: "10px"}}>
-            <Box style={{gap: "8px", display: "flex"}}>
-                <Button variant="contained" className="customButton">
-                    Operations
-                </Button>
-                <Button variant="contained" className="customFilter">
-                    <Filter /> Add Filters
-                </Button>
+        <div style={{display: "flex", flexDirection: "column", padding: "4px 16px"}}>
+            <div className="main-content">
+                <Box style={{gap: "8px", display: "flex", alignItems: "center"}}>
+                    <Button className="customOperation">Operations</Button>
+                    <Button className="customFilter">
+                        <Filter />
+                    </Button>
+                </Box>
+                <Box className="main-items">
+                    <Typography variant="h4" className="main-edit">
+                        Edit mode <ToggleIcon />
+                    </Typography>
+
+                    <Button className="main-edit">
+                        <EyeIcon />
+                    </Button>
+                    <Button>
+                        <SaveIcon />
+                    </Button>
+                </Box>
+            </div>
+            <Box>
+                <CustomizedTables />
             </Box>
-            <Box></Box>
         </div>
     );
 };

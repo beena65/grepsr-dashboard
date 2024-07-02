@@ -1,0 +1,36 @@
+.main-content {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-content .main-items {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+.main-items .main-edit {
+    font-family: "Manrope", sans-serif !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: "";
+    gap: 4px;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+
+    color: #1b2d4f;
+}
+.main-content .customOperation {
+    background: #1276ff;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Manrope", sans-serif !important;
+    width: 98px !important;
+    height: 32px !important;
+    border-radius: 6px;
+    text-transform: capitalize;
+}
