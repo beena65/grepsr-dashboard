@@ -8,8 +8,7 @@
         "build": "vite build",
         "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
         "preview": "vite preview",
-        "test": "jest --config=jest.config.js",
-        "test:watch": "jest --config=jest.config.js --watch"
+        "test": "vitest  --coverage"
     },
     "dependencies": {
         "@babel/preset-env": "^7.24.7",
@@ -19,14 +18,16 @@
         "@mui/icons-material": "^5.15.21",
         "@mui/material": "^5.15.21",
         "@mui/styles": "^5.15.21",
-        "axios": "^1.7.2",
         "react": "^18.3.1",
-        "react-dom": "^18.3.1"
+        "react-dom": "^18.3.1",
+        "react-router-dom": "^6.24.0"
     },
     "devDependencies": {
         "@testing-library/jest-dom": "^6.4.6",
         "@testing-library/react": "^16.0.0",
+        "@testing-library/user-event": "^14.5.2",
         "@vitejs/plugin-react": "^4.3.1",
+        "@vitest/coverage-v8": "^1.6.0",
         "babel-jest": "^29.7.0",
         "eslint": "^8.57.0",
         "eslint-config-prettier": "^9.1.0",
@@ -34,9 +35,12 @@
         "eslint-plugin-react-hooks": "^4.6.2",
         "eslint-plugin-react-refresh": "^0.4.7",
         "jest-environment-jsdom": "^29.7.0",
+        "jsdom": "^24.1.0",
+        "msw": "^2.3.1",
         "prettier": "^3.3.2",
         "stylelint": "^16.6.1",
         "stylelint-config-prettier": "^9.0.5",
-        "vite": "^5.3.1"
+        "vite": "^5.3.1",
+        "vitest": "^1.6.0"
     }
 }

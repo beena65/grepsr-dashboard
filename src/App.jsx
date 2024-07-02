@@ -1,37 +1,22 @@
-import Sidebar from "./components/Sidebar/Sidebar";
-import Header from "./components/Header/Header";
+import {lazy, Suspense} from "react";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import "./App.css";
-import {useState} from "react";
-import MainContent from "./components/Content/MainContent";
+
+const Home = lazy(() => import("./components/Header/Home"));
+const Workflow = lazy(() => import("./components/Content/WorkContent"));
+const Credit = lazy(() => import("./components/Content/CreditContent"));
+
 function App() {
-    const [isSidebarOpen, setSidebarOpen] = useState(true);
-    const [selectedContent, setSelectedContent] = useState(0);
-
-    const toggleSidebar = () => {
-        setSidebarOpen((prev) => !prev);
-    };
-    const handleItemClick = (index) => {
-        setSelectedContent(index);
-    };
     return (
-        <div className={`App ${isSidebarOpen ? "content-wrap" : "sidebar-hidden"}`}>
-            <div className="content-wrapper">
-                {isSidebarOpen && (
-                    <Sidebar
-                        isSidebarOpen={isSidebarOpen}
-                        activeIndex={selectedContent}
-                        onItemClick={handleItemClick}
-                    />
-                )}
-            </div>
-
-            <div style={{flex: 6, display: "flex", flexDirection: "column"}}>
-                <Header isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-                <div style={{flex: 1, overflowY: "auto", background: "#F6F5FB"}}>
-                    <MainContent selectedContent={selectedContent} />
-                </div>
-            </div>
-        </div>
+        <Router>
+            <Suspense fallback={<div>Loading...</div>}>
+                <Routes>
+                    <Route exact path="/" element={<Home />} />
+                    <Route path="/workflow" element={<Workflow />} />
+                    <Route path="/credit" element={<Credit />} />
+                </Routes>
+            </Suspense>
+        </Router>
     );
 }
 

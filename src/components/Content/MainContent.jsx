@@ -1,47 +1,18 @@
 /* eslint-disable react/prop-types */
-import {Box, Button, Typography} from "@mui/material";
-import Filter from "../Icons/Filter";
-import ToggleIcon from "../Icons/ToggleIcon";
-import EyeIcon from "../Icons/EyeIcon";
-import SaveIcon from "../Icons/SaveIcon";
 import "./Content.css";
-import CustomizedTables from "./Table";
+import DataContent from "./DataContent";
+import WorkContent from "./WorkContent";
+import CreditContent from "./CreditContent";
 
 const MainContent = ({selectedContent}) => {
     const renderContent = () => {
         switch (selectedContent) {
             case 0:
-                return (
-                    <>
-                        <div className="main-content">
-                            <Box style={{gap: "8px", display: "flex", alignItems: "center"}}>
-                                <Button className="customOperation">Operations</Button>
-                                <Button className="customFilter">
-                                    <Filter />
-                                </Button>
-                            </Box>
-                            <Box className="main-items">
-                                <Typography variant="h4" className="main-edit">
-                                    Edit mode <ToggleIcon />
-                                </Typography>
-
-                                <Button className="main-edit">
-                                    <EyeIcon />
-                                </Button>
-                                <Button>
-                                    <SaveIcon />
-                                </Button>
-                            </Box>
-                        </div>
-                        <Box>
-                            <CustomizedTables />
-                        </Box>
-                    </>
-                );
+                return <DataContent />;
             case 1:
-                return <div>Workflow Content</div>;
+                return <WorkContent />;
             case 2:
-                return <div>Credit Content</div>;
+                return <CreditContent />;
             default:
                 return <div>Select an item from the sidebar</div>;
         }
