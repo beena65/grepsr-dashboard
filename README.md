@@ -1,8 +1,28 @@
-# React + Vite
+***This project is a React application  with Vite and configured with pnpm.
 
+** About
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. @vitejs/plugin-react uses Babel for Fast Refresh
+2. @vitejs/plugin-react-swc uses SWC for Fast Refresh
+
+** Prerequisites
+1. Node.js
+2. pnpm
+
+** Installation
+1. Clone the repository:
+- git clone https://github.com/yourusername/grepsr-project.git
+- cd grepsr-project
+
+
+** Install dependencies:
+- pnpm install
+
+** Start the development server:
+- pnpm run dev
+
+** Run test using pnpm
+-pnpm run test
