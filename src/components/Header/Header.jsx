@@ -11,17 +11,17 @@ import "./Header.css";
 
 const Header = ({isSidebarOpen, toggleSidebar}) => {
     return (
-        <AppBar position="static" className="App-bar">
+        <AppBar className="App-bar">
             <Toolbar className="tool-bar">
                 <Box sx={{flexGrow: 1}} className="box-wrap">
                     <IconButton edge="start" onClick={toggleSidebar}>
                         {isSidebarOpen ? <Arrowback /> : <MenuIcon />}
                     </IconButton>
-                    <Typography variant="h4" className="customtypography">
+                    <Typography variant="h4" className="customtypography hidden-xs">
                         Amazon product price
                     </Typography>
 
-                    <IconButton>
+                    <IconButton className=" hidden-xs">
                         <Erroroutline />
                     </IconButton>
                 </Box>

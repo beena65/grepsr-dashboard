@@ -16,7 +16,7 @@ const DataContent = () => {
                     </Button>
                 </Box>
                 <Box className="main-items">
-                    <Typography variant="h4" className="main-edit">
+                    <Typography variant="h4" className="main-edit  hidden-xs">
                         Edit mode <ToggleIcon />
                     </Typography>
 
