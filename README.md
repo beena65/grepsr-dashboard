@@ -14,7 +14,7 @@ Currently, two official plugins are available:
 
 ** Installation
 1. Clone the repository:
-- git clone https://github.com/yourusername/grepsr-project.git
+- git clone https://github.com/beena65/grepsr-dashboard.git
 - cd grepsr-project
 
 
